@@ -62,8 +62,9 @@ app.post("/api/users/:_id/exercises", (req, res) => {
             duration: newExercise.duration,
             date: newExercise.date
           })
+        else res.send(err)
       })
-    }
+    } else res.send(err)
   })
 })
 
